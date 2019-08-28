@@ -1,22 +1,18 @@
-<h1>Cats!</h1>
+<h1>Eat the burger!</h1>
 
-<h2>Cats that are not sleepy!</h2>
+<h2>Burgers ready to eat:</h2>
 
 <ul>
-  {{#each cats}}
-    {{#unless sleepy}}
-      {{> cats/cat-block sleep=true}}
-    {{/unless}}
+  {{#each burgers}}
+
   {{/each}}
 </ul>
 
-<h2>Cats that are sleepy!</h2>
+<h2>Burgers that have been DEVOURED:</h2>
 
 <ul>
-  {{#each cats}}
-    {{#if sleepy}}
-      {{> cats/cat-block sleep=false}}
-    {{/if}}
+  {{#each burgers}}
+
   {{/each}}
 </ul>
 
@@ -25,8 +21,11 @@
 
   <div class="form-group">
     <label for="ca">Burger Name:</label>
-    <input type="text" id="ca" name="name">
+    <input type="text" class="burger-name" id="ca" name="name">
   </div>
 
-  <button type="submit">Add Burger</button>
+  <button class="submit-button" type="submit">Add Burger</button>
+  <a href="api/burgers">Burger Data</a>
 </form>
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="/public/assets/burger.js"></script>
