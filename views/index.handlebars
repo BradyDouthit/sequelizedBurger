@@ -3,14 +3,16 @@
 <h2>Burgers ready to eat:</h2>
 
 <ul>
+  {{#if burgers}}
   <li>{{burgers}}</li>
+  {{/if}}
 </ul>
 
 <h2>Burgers that have been DEVOURED:</h2>
 
 <ul>
-  {{#each burgers}}
-
+  {{#each burgerArray}}
+  <li>{{this}}</li>
   {{/each}}
 </ul>
 

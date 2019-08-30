@@ -12,14 +12,15 @@ module.exports = function (app) {
     })
     db.burger.findAll({})
       .then(function (data) {
-
+        var burgerArray = [];
         for (var i = 0; i < data.length; i++) {
           var burgerName = data[i].burger_name
-          console.log(burgerName)
+          burgerArray.push(burgerName)
         };
-
+        console.log(burgerArray)
         res.render("index", {
-          burgers: burgerName
+          burgers: burgerName,
+          burgerArray: burgerArray
         });
       })
   });
