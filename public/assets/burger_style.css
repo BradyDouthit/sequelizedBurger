@@ -1,0 +1,55 @@
+.container {
+    width: 70vw;
+    display: inline-block;
+}
+body {
+    text-align: center;
+    background-color: black;
+    font-family: 'Oswald', sans-serif;
+}
+.ready {
+    padding: 0;
+}
+.devoured {
+    padding: 0;
+}
+.submit-and-data {
+    margin-top: 15px;
+}
+
+.submit-button {
+    border: none;
+    border-radius: 3px;
+    padding: 5px;
+    background-color: #caa76e;
+    color: black;
+}
+.burger-button {
+    border: none;
+    border-radius: 3px;
+    padding: 5px;
+    background-color: #987517;
+    color: white;
+}
+h1, h2 {
+    color: #caa76e;
+}
+.form-group {
+    color: #caa76e;
+}
+input {
+    background-color: #caa76e;
+    border: 1px solid black
+}
+#add-burger {
+    color: red;
+}
+#devoured-h {
+    color: #987517;
+}
+#ready-h {
+    color: yellow;
+}
+#api-link {
+    color: #caa76e;
+}

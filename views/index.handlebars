@@ -1,31 +1,45 @@
+<head>
+  <link rel="stylesheet" href="/public/assets/burger_style.css">
+  <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+
 <h1>Eat the burger!</h1>
 
-<h2>Burgers ready to eat:</h2>
+<h2>Click a burger to eat it!</h2>
 
-<ul>
-  {{#if burgers}}
-  <li>{{burgers}}</li>
-  {{/if}}
-</ul>
+<h2 id="ready-h">Burgers ready to eat:</h2>
 
-<h2>Burgers that have been DEVOURED:</h2>
-
-<ul>
+<ul class="ready">
   {{#each burgerArray}}
-  <li>{{this}}</li>
+  <button class="burger-button">{{this}}</button>
   {{/each}}
 </ul>
 
-<h2>Add a Burger!</h2>
+<h2 id="devoured-h">Burgers that have been DEVOURED:</h2>
+
+<ul class="devoured">
+  {{#each burgerArray}}
+  <button class="burger-button">{{this}}</button>
+  {{/each}}
+</ul>
+
+<h2 id="add-burger">Add a Burger!</h2>
 <form class="create-form">
 
   <div class="form-group">
     <label for="ca">Burger Name:</label>
-    <input type="text" class="burger-name" id="ca" name="name">
+    <input type="text" class="burger-name" id="ca" name="name" placeholder="Classic Cheeseburger">
   </div>
-
-  <button class="submit-button" type="submit">Add Burger</button>
-  <a href="api/burgers">Burger Data</a>
+  <div class="submit-and-data">
+    <button class="submit-button" type="submit">Add Burger</button>
+    <a href="api/burgers" id="api-link">Burger Data</a>
+  </div>
+  
 </form>
+</div>
+
+</body>
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="/public/assets/burger.js"></script>
