@@ -13,11 +13,15 @@ $('.submit-button').on('click', function (event) {
 
 
 $('.burger-button').on('click', function () {
-    $(this).attr('devoured', true)
-    $.ajax('/api/burgers', {
+    var id = $(this).data("id");
+
+
+    $.ajax('/api/burgers/' + 1, {
         type: 'PUT',
         data: { devoured: true }
-    }).then(function () {
+    }).then(function (req, res) {
+        console.log(req)
+        console.log(res)
         if ($(this).attr('devoured') === true) {
             $(this).appendTo('.devoured')
         }

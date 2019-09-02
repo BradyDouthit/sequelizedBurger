@@ -55,10 +55,10 @@ module.exports = function (app) {
       devoured: req.body.devoured
     }, {
       where: {
-        id: req.body.id
+        id: req.params.id
       }
-    }).then(function(dbTodo) {
-      res.json(dbTodo);
+    }).then(function(dbBurger) {
+      res.json(dbBurger);
     });
   });
 };
