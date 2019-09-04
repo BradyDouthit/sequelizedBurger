@@ -1,9 +1,7 @@
-require("dotenv").config();
-
-module.exports = {
+{
   "development": {
     "username": "root",
-    "password": process.env.MYSQL_PW,
+    "password": null,
     "database": "burgers_db",
     "host": "127.0.0.1",
     "dialect": "mysql",
@@ -18,11 +16,12 @@ module.exports = {
     "operatorsAliases": false
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "username": "sqvycuig6f8ffcal",
+    "password": "ssvk3u37ra4zviil",
+    "database": "vivb5owwvmifgzri",
+    "host": "fnx6frzmhxw45qcb.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql",
-    "operatorsAliases": false
+    "operatorsAliases": false,
+    "use_env_variable": "JAWSDB_URL"
   }
 }
