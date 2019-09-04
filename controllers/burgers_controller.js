@@ -14,14 +14,13 @@ module.exports = function (app) {
       .then(function (data) {
         var burgerArray = [];
         for (var i = 0; i < data.length; i++) {
-          var id = data[i].id
+          // var id = data[i].id
           var burgerName = data[i].burger_name;
           var devoured = data[i].devoured;
           //console.log(`Devoured: ${devoured[i]}`)
-          burgerArray.push(id + '. ' + burgerName);
+          burgerArray.push(burgerName);
         };
         res.render("index", {
-          id: id,
           burgers: burgerName,
           burgerArray: burgerArray,
           devoured: devoured
@@ -50,12 +49,13 @@ module.exports = function (app) {
     });
   });
 
-  app.put('/api/burgers/:id', function(req, res) {
+  app.put('/api/burgers/:name', function(req, res) {
+    console.log(req.params)
     db.burger.update({
       devoured: req.body.devoured
     }, {
       where: {
-        id: req.params.id
+        burger_name: req.params.name
       }
     }).then(function(dbBurger) {
       res.json(dbBurger);

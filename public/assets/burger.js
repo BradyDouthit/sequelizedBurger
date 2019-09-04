@@ -9,10 +9,10 @@ $('.submit-button').on('click', function (event) {
 
 
 $('.burger-button').on('click', function () {
-    var id = $(this).data("id");
+    var id = $(this).attr("data-name");
+    console.log(id)
 
-
-    $.ajax('/api/burgers/' + 1, {
+    $.ajax('/api/burgers/' + id, {
         type: 'PUT',
         data: { devoured: true }
     }).then(function (req, res) {
