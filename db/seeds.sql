@@ -1,1 +1,1 @@
-INSERT INTO burgers (burger_name, devoured) VALUES ('Classic Cheeseburger', false);
+INSERT INTO burgers (burger_name, createdAt, updatedAt) VALUES ('Classic Cheeseburger', createdAt, updatedAt);

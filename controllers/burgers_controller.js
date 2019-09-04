@@ -4,26 +4,10 @@ let db = require("../models")
 module.exports = function (app) {
   //handlebars routes
   app.get('/', function (req, res) {
-    // db.burger.create({
-    //   burger_name: "classic cheeseburger"
-    // });
-    // db.burger.create({
-    //   burger_name: "Bacon cheeseburger"
-    // })
     db.burger.findAll({})
       .then(function (data) {
-        var burgerArray = [];
-        for (var i = 0; i < data.length; i++) {
-          // var id = data[i].id
-          var burgerName = data[i].burger_name;
-          var devoured = data[i].devoured;
-          //console.log(`Devoured: ${devoured[i]}`)
-          burgerArray.push(burgerName);
-        };
         res.render("index", {
-          burgers: burgerName,
-          burgerArray: burgerArray,
-          devoured: devoured
+          burgers: data
         });
       })
   });

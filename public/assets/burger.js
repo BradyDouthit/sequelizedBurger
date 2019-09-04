@@ -16,13 +16,10 @@ $('.burger-button').on('click', function () {
         type: 'PUT',
         data: { devoured: true }
     }).then(function (req, res) {
-        console.log(req)
-        console.log(res)
-        if ($(this).attr('devoured') === true) {
-            $(this).appendTo('.devoured')
-        }
-    }
-    );
+
+        location.reload();
+        
+    });
 });
 
 

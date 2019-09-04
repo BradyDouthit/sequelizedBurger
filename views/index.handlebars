@@ -12,15 +12,22 @@
 <h2 id="ready-h">Burgers ready to eat:</h2>
 
 <ul class="ready">
-  {{#each burgerArray}}
-  <button data-name="{{this}}" class="burger-button">{{this}}</button>
+  {{#each burgers}}
+  {{#if devoured}}
+  {{else}}
+  <button data-name="{{burger_name}}" class="burger-button">{{burger_name}}</button>
+  {{/if}}
   {{/each}}
 </ul>
 
 <h2 id="devoured-h">Burgers that have been DEVOURED:</h2>
 
 <ul class="devoured">
-  
+  {{#each burgers}}
+  {{#if devoured}}
+  <div class="devoured-burgers">{{burger_name}}</div>
+  {{/if}}
+  {{/each}}
 </ul>
 
 <h2 id="add-burger">Add a Burger!</h2>
