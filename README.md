@@ -1,4 +1,6 @@
 # Sequelized Burger App
+![alt text](public/assets/burger.PNG)
+
 ## Deployed Heroku link: https://floating-depths-75632.herokuapp.com/  
 
 ## Tools Used
